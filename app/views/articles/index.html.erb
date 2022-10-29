@@ -1,0 +1,12 @@
+<h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+<p>Vishal Singh Rajput</p>
+<p> of the Table</p>
+<ul>
+ <% @articles.each do |article|%>
+   <li>
+    <%= link_to article.title ,article %>
+   </li>
+   <%end%>
+</ul>
+<%= link_to 'Create Artice', new_article_path%>

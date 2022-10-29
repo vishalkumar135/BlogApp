@@ -1,0 +1,33 @@
+
+There is an important difference between render and redirect_to: render will tell Rails what view it should use 
+(with the same parameters you may have already sent) but redirect_to sends a new request to the browser.
+
+When an action does not explicitly render a view (or otherwise trigger an HTTP response),
+sRails will automatically render a view that matches the name of the controller and action. 
+
+article.all  returns an ActiveRecord::Relation object, which you can think of as a super-powered array.
+
+
+redirect_to will cause the browser to make a new request, whereas render renders the specified view for the current request.
+ It is important to use redirect_to after mutating the database or application state. 
+ Otherwise, if the user refreshes the page, the browser will make the same request, and the mutation will be repeated.
+
+
+ The new action instantiates a new article, but does not save it. This article will be used in the view when building the form. 
+
+ he full_messages_for method returns an array of user-friendly error messages for a specified attribute. If there are no errors for that attribute, the array will be empty.
+
+#########################################3
+
+Command for dump of  moongodb
+Export
+
+for creating the dump for the database your system(Export)
+mongodump
+
+Single database dump
+ mongodump -d databaseName
+ 
+ single 
+
+ mongorestore -d databaseName/path/
